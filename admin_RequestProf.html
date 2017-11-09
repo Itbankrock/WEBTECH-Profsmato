@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- DataTable css styles -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.bootstrap4.min.css">
+  
+  <style>
+	.mainContainer {
+      padding-top: 3rem;
+    }
+  
+  
+    .carousel {
+      background-color: black;
+    }
+
+    .carousel-item {
+      text-align: center;
+    }
+
+    .carousel-item img {
+      height: 400px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+    }
+
+    .carousel-caption h3,
+    p {
+      margin-left: 2rem;
+    }
+
+    .proflabel {
+      display: inline;
+      margin: auto;
+      font-size: 1.1rem;
+      left: 2%;
+      position: relative;
+    }
+
+    .threadlabel {
+      display: inline;
+      margin: auto;
+      font-size: 1.1rem;
+      left: 0.6%;
+      position: relative;
+    }
+
+    @media ( min-width: 768px) {
+      .grid-divider {
+        border-right: 1px solid gray;
+      }
+      .responsive-hr {
+        background-color: gray;
+        opacity: 1;
+      }
+    }
+
+    @media ( max-width: 768px) {
+      .responsive-hr {
+        background-color: gray;
+        opacity: 0;
+      }
+    }
+	
+	.material-shadow{
+		box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	}
+	
+	.material-shadow:hover{
+		box-shadow: 0 3px 25px rgba(0,0,0,0.16), 0 3px 25px rgba(0,0,0,0.23);
+	}
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Management
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_manageCarousel.html">Homepage</a>
+			  <a class="dropdown-item" href="admin_ManageUsers.html">Users</a>
+			  <a class="dropdown-item" href="admin_ManageProfs.html">Professors</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Complaints
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_ReportedReviews.html">Reported Reviews</a>
+			  <a class="dropdown-item" href="admin_ReportedUsers.html">Reported Users</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Requests
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_RequestRegistration.html">Registration</a>
+			  <a class="dropdown-item" href="admin_RequestProf.html">Professors</a>
+			</div>
+		  </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Administrator </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <!-- Main elements -->
+	<div class="container mainContainer">
+	<h1 class="display-4">
+		Professor Requests
+	</h1>
+	<div class="alert alert-info alert-dismissible fade show material-shadow" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	  </button>
+	  <strong>Welcome to the Professor Requests module, admin!</strong> You should check in on some of those fields below.
+	</div>
+	
+		<div class="row mb-3">
+			<div class="col-md-6">
+		
+
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="Search the table" id="searchpogi">
+				  <span class="input-group-addon"><a href="#" class="text-success"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+				  
+				</div>
+			<br class="d-md-none d-lg-none">
+			</div>
+			
+			<div class="col-md-6">
+				<button type="button" class="btn btn-raised btn-primary" id="butt_filters">ADVANCED FILTERS</button>
+			</div>
+		
+		</div><!--/row-->
+		
+		<div class="row mb-3">
+		<div class="col-md-7">
+			<div id="filters" style="display:none;">
+				
+				<div class="btn-group">
+				  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					BY COLLEGE
+				  </button>
+				  <div class="dropdown-menu">
+					<a class="dropdown-item" href="#">CCS</a>
+					<a class="dropdown-item" href="#">COS</a>
+					<a class="dropdown-item" href="#">CLA</a>
+					<a class="dropdown-item" href="#">GCOE</a>
+					<a class="dropdown-item" href="#">SOE</a>
+					<a class="dropdown-item" href="#">COB</a>
+					<a class="dropdown-item" href="#">BAGCED</a>
+					<a class="dropdown-item" href="#">COL</a>
+				  </div>
+				</div>
+			</div>
+			
+
+			
+		</div> <!--/col-md-10-->	
+		
+		</div> <!--/row-->
+		
+		
+		<div class="row mb-3">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered nowrap material-shadow" cellspacing="0" width="100%" id="yutangina">
+					
+						<thead class="thead-inverse">
+							<tr>
+								<th>Professor name</th>
+								<th>College</th>
+								<th>Approval</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Calantuan</td>
+								<td>CCS</td>
+								<td>
+									<button class="btn btn-primary">Approve</button>
+									<button class="btn btn-danger">Reject</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Santiago</td>
+								<td>CCS</td>
+								<td>
+									<button class="btn btn-primary">Approve</button>
+									<button class="btn btn-danger">Reject</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Inoue</td>
+								<td>CCS</td>
+								<td>
+									<button class="btn btn-primary">Approve</button>
+									<button class="btn btn-danger">Reject</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Alderite</td>
+								<td>CCS</td>
+								<td>
+									<button class="btn btn-primary">Approve</button>
+									<button class="btn btn-danger">Reject</button>
+								</td>
+							</tr>
+							<tr>
+								<td>General</td>
+								<td>CCS</td>
+								<td>
+									<button class="btn btn-primary">Approve</button>
+									<button class="btn btn-danger">Reject</button>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				
+				</div>
+			</div>
+		</div>
+		
+			
+
+		
+		
+	</div><!--div class container -->
+	
+	
+  <!--FOOTER-->
+  <br>
+  <div class="bg-success text-white">
+    <div class="container">
+      <div class="row">
+        <div class="p-4 col-md-4">
+          <h3 class="mb-4 text-white">About Us</h3>
+          <p class="text-white">A company for whatever you may need, from website prototyping to publishing</p>
+        </div>
+        <div class="p-4 col-md-4">
+          <h3 class="mb-4">Contact</h3>
+          <p>
+            <a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 935 117 8429</a>
+          </p>
+          <p>
+            <a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>info@phantom5.com</a>
+          </p>
+          <p>
+            <a href="https://goo.gl/maps/WGeA8c8BH5K2" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-map-marker text-white"></i>Pyongyang, North Korea</a>
+          </p>
+        </div>
+        <div class="p-4 col-md-4">
+          <h3 class="mb-4 text-light">Follow Us!</h3>
+          <p>
+            <a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook-square"></i>/phantomFiveDevTeam</a>
+          </p>
+          <p>
+            <a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@phantomFiveDevTeam</a>
+          </p>
+          <p>
+            <a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@phantomFiveDevTeam</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white">© Copyright 2017 Phantom Five Dev Team - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+<!-- Data Table Libs  -->
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.0/js/responsive.bootstrap4.min.js"></script>
+  
+<script type="text/javascript" class="init">
+$(document).ready(function() {
+	$('body').bootstrapMaterialDesign();
+	
+	$('#yutangina').DataTable( {
+		responsive: {
+			details: {
+				display: $.fn.dataTable.Responsive.display.modal( {
+					header: function ( row ) {
+						var data = row.data();
+						return 'Details for '+data[0]+' '+data[1];
+					}
+				} ),
+				renderer: $.fn.dataTable.Responsive.renderer.tableAll( {
+					tableClass: 'table'
+				} )
+			}
+		}
+	} );
+	
+	$("#yutangina_filter").hide();
+	
+	$('#searchpogi').on('keypress keyup keydown',function(event) { 
+	  // create the event
+	   var press = jQuery.Event(event.type);
+	   var code = event.keyCode || event.which;
+	   press.which = code;
+	  // trigger 
+	  $("input[type=search]").val(this.value);
+	  $("input[type=search]").trigger(event.type, {'event': press});
+	});
+	
+	
+	//$("input[type=search]").click(function() {
+	  //alert( "Handler for .click() called." );
+	//});
+	
+	$("#butt_filters").click(function(){
+		$("#filters").toggle(300);
+	});
+	
+} )
+</script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <!-- bower imports -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="bower_components/paper-fab-speed-dial/paper-fab-speed-dial.html">
+
+<style is="custom-style">
+  paper-fab-speed-dial.two {
+    --paper-fab-speed-dial: {
+      bottom: 2%;
+      right: 1.2%;
+	  position:fixed;
+    };
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+	
+	paper-fab.fblue {
+	  --paper-fab-background: #3B5998;
+	  --paper-fab-keyboard-focus-background: #3B5998;
+	}
+	
+	paper-fab.twitter {
+	  --paper-fab-background: #1DA1F2;
+	  --paper-fab-keyboard-focus-background: #1DA1F2;
+	}
+	
+	paper-fab.info {
+	  --paper-fab-background: #646464;
+	  --paper-fab-keyboard-focus-background: #646464;
+	}
+  
+</style>    
+  
+  <style>
+    .mainContainer {
+      padding-top: 2rem !important;
+    }
+
+    .text-black {
+      color: black;
+    }
+	
+	.card-text {
+	  font-size: 16px;
+	  font-family: Roboto;
+	}
+	
+	.profpic {
+		width: 8rem; 
+		height: 8rem;
+		background-size: 100% auto;
+		background-image:url(andrew.jpg);
+	    border: 3px solid white;
+	    box-shadow: 2px 2px 15px black;
+	    margin:0 auto; 
+	}
+	
+	.camera {
+		opacity: 0;
+		padding-top: 3rem;
+		color: black;
+	}
+	.profpic:hover {
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	
+	.profpic:hover .camera{
+		opacity: 1;
+	}
+	
+	div.scrollmenu {
+		background-color: #fff;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	
+	div.scrollmenu img:hover {
+	    border: 2px solid green;
+	}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="css_collegepage.html">CCS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COL</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">CLA</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">GCOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COB</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">SOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">BAGCED</a>
+          </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  <div class="container mainContainer">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-3" style="max-width: 20rem;margin-left:auto;margin-right:auto;">
+          <div class="card-header text-center" style="background-image:url(3.jpg);">
+              <div class="rounded-circle profpic" data-toggle="modal" data-target="#exampleModal">
+			    <i class="fa fa-camera fa-2x camera" aria-hidden="true"></i>
+			  </div>
+		  </div>
+          <div class="card-body">
+            <h4 class="card-title" id="genname">Andrew Santiago</h4>
+            <p class="text-black" style="margin: auto;"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> john_andrew_santiago@dlsu.edu.ph</p>
+            <a href="#" class="text-black"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> /andrew</a>
+            <br>
+            <a href="#" class="text-black"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> /@santiagoja_rog</a>
+            <br>
+            <a href="#" class="text-black"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i> /@santiagoja_rog</a>
+            <br>
+            <a href="#" class="text-black"><i class="fa fa-steam-square fa-2x" aria-hidden="true"></i> /@Itbankrock</a>
+            <br>
+            <a href="#" class="text-black"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i> /@Itbankrock</a>
+          </div>
+        </div>
+      </div>
+      <!-- col -->
+      <div class="col-md-8">
+        <div class="card text-white mb-3" style="">
+          <div class="card-header bg-success">
+            <h4>Information</h4>
+          </div>
+          <div class="card-body text-black edit">
+            
+			<h4 class="card-title">Name</h4>
+		    <div><p class="card-text">John Andrew Santiago</p></div>
+            <br>
+			
+			<h4 class="card-title">College</h4>
+		    <div><p class="card-text">College of Computer Studies</p></div>
+            <br>
+            
+			<h4 class="card-title">Course </h4>
+		    <div><p class="card-text">Bachelor of Science in Information Technology</p></div>
+            <br>
+            
+			<h4 class="card-title">About me </h4>
+		    <div><p class="card-text">Bading si Eduard</p></div>
+            <br>
+            
+			<h4 class="card-title">Statistics</h4>
+		    <p class="card-text">Number of Reviews: 742</p>
+            <br>
+			
+            <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" id="edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+          </div>
+        </div>
+      </div>
+      <!-- col -->
+    </div>
+    <!--row -->
+  </div>
+  <!--container end-->
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" style="width: 50rem !important; overflow-y: auto;">
+		<div class="modal-content">
+		  <div class="card-header bg-success text-white">
+			<h5 class="card-title" id="exampleModalLabel" style="margin: auto;">Update Profile Picture</h5>
+		  </div>
+		  <div class="card-body">
+			<button class="btn btn-primary" onclick="filedialog()" style="width:100%; height: 100px;">
+			<i class="fa fa-plus" aria-hidden="true"></i> Upload Photo
+			<input type="file" id="upload" hidden>
+			</button>
+			<hr>
+			<p class="text-muted">Previous Photos</p>
+			<div class="scrollmenu">
+			<img src="andrew.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="nigel.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="yuta.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="eduard.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="xtian.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="rj.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/siroli.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/solomon.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/stanley.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/tabora.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/tangkeko.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/valencia.jpg" style="width: 7.5rem; height: 7.5rem;">
+			</div>
+			<hr>
+			<p class="text-muted">Background Photos</p>
+			<div class="scrollmenu">
+			<img src="profpics/acuna.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/alain.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/arcilla.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/bertumen.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/ching_michelle.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/diane.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/gallego.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/jordan.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/laguna.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/marnel.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/rjmolano.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/roger.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/shirley.jpg" style="width: 7.5rem; height: 7.5rem;">
+			<img src="profpics/sipin.jpg" style="width: 7.5rem; height: 7.5rem;">
+			</div>
+		  </div>
+		  <div class="card-footer text-right">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Post</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+				
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+<div class="screen">
+  <paper-fab-speed-dial class="two">
+    <paper-fab class ="blue" icon="more-vert"></paper-fab>
+    <div class="dropdown-content">
+      <a href="aboutus.html"><paper-fab class="info" mini icon="info-outline"></paper-fab></a>
+      <paper-fab class="twitter" mini src="twitter.svg"></paper-fab>
+      <paper-fab class="fblue" mini src="facebook.svg"></paper-fab>
+	  <paper-fab mini src="instagram.svg"></paper-fab>
+    </div>
+  </paper-fab-speed-dial>
+</div>
+  
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+  <script>
+    $(document).ready(function(){
+	
+		$("#edit").click(function() {
+		    if ($(this).find("i").attr("class") == 'fa fa-check') 
+			{
+				var count = true;
+				
+				$("div.edit > div").each(function(i) {
+					if (count) {
+					  $("#genname").text($(this).find("input").val());
+					  count = false;
+					}
+					$(this).html('<p class="card-text">' + $(this).find("input").val() + '</p>');
+				});
+				
+				$(this).find("i").attr("class", "fa fa-pencil-square-o");
+			} 
+			else 
+			{
+				$("div.edit > div").each(function(i) {
+					$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+				});
+				
+				$(this).find("i").attr("class", "fa fa-check");
+			}
+		});
+		
+		/*$("#inputcl").click(function() {
+		  $("#upload").click();
+		});*/
+		
+		
+	});
+	
+	function filedialog() {
+		document.getElementById("upload").click();
+	}
+	
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<title>About Us</title>
+<head>
+  <meta charset="utf-8">
+  
+  <!-- bower imports -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="bower_components/paper-fab-speed-dial/paper-fab-speed-dial.html">
+
+<style is="custom-style">
+  paper-fab-speed-dial.two {
+    --paper-fab-speed-dial: {
+      bottom: 2%;
+      right: 1.2%;
+	  position:fixed;
+    };
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+	
+	paper-fab.fblue {
+	  --paper-fab-background: #3B5998;
+	  --paper-fab-keyboard-focus-background: #3B5998;
+	}
+	
+	paper-fab.twitter {
+	  --paper-fab-background: #1DA1F2;
+	  --paper-fab-keyboard-focus-background: #1DA1F2;
+	}
+	
+	paper-fab.info {
+	  --paper-fab-background: #646464;
+	  --paper-fab-keyboard-focus-background: #646464;
+	}
+  
+</style> 
+  
+  <style>
+    .mainContainer {
+      padding-top: 1rem;
+    }
+	.proflabel{
+	font-size:1rem;
+	}
+	.profpic{
+	width:5rem;
+	box-shadow: 0px 3px 5px black;
+	position:absolute;
+	transform: translate(-2.4rem,-4rem); /* Standard syntax */
+	}
+	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px)
+	{
+		.card h1.card-title,
+		.card h2.card-title,
+		.card h3.card-title,
+		.card h4.card-title,
+		.card h5.card-title,
+		.card h6.card-title {
+		font-size: 1.0rem !important;
+		font-weight: 300 !important; }
+	
+	}
+	
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="css_collegepage.html">CCS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COL</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">CLA</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">GCOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COB</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">SOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">BAGCED</a>
+          </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  <div class="container mainContainer">
+  
+	  <div class="row">
+		
+		<div class="col-md-12">
+			
+			<div class="card">
+			  <div class="card-header bg-success text-white">
+				<h3>About Us</h3>
+			  </div>
+			  <div class="card-body">
+			  
+				<div class="text-center"><img src="phantom5logo.png" style="width:25%;"/>
+					<blockquote class="blockquote mb-0">
+				  <cite title="Source Title" class="text-secondary">Phantom Five Dev Team 2017 Logo.</cite>
+				</blockquote>
+				</div>
+				
+				<div>
+					<p style="text-align:justify;">
+					Phantom Five Dev Team is a small startup IT company that provides enterprise-class IT solutions to different businesses in the world, regardless of the scale.
+					As of now, it is composed of 5 dedicated members who are very well-rounded in today's latest technologies and applying them in practical uses. The company is
+					planning to further expand its team in order to provide faster, and better solutions to its clients. Right now the company is known for providing business solutions
+					for San Miguel Corporation, Komorosoba Food Corporation, De La Salle University - Manila, DB Schenker Global Logistics, and Petron.
+					</p>
+				</div>
+				
+			  
+				<blockquote class="blockquote mb-0">
+				  <p>"Our paradigm is not to work hard, but to work smart."</p>
+				  <footer class="blockquote-footer">Yuta Inoue, a.k.a. Sherv Ang, <cite title="Source Title">Phantom Five Dev Team </cite></footer>
+				</blockquote>
+			  </div>
+			</div>
+			
+		</div>
+		
+	  </div> <!-- end of row -->
+	  <br>
+	  <h3>The Team</h3>
+	  <div class="row">
+	  <br>
+	  <div class="col-md-4">
+			<div class="card text-white bg-success">
+			<div class="card-header">Header</div>
+			  <div class="card-body text-center">
+				<img src="yuta.JPG" class="profpic rounded-circle" /><br>
+				<a href="profProfile.html" class="text-white"><h4 class="card-title">Yuta Inoue</h4></a></a>
+				<p class="card-text">Back-end developer, Project Manager.</p><br>
+				<div style="line-height: 0.1rem;">
+					<p><a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 927 895 0136</a></p>
+					<p><a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>yuta_sherv_ang@dlsu.edu.ph</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook"></i>/yuta.sherv.inoue</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@YutaKikuchi53</a></p>
+					<p><a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@yuta4532</a></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="card text-white bg-success">
+			<div class="card-header">Header</div>
+			  <div class="card-body text-center">
+				<img src="andrew.JPG" class="profpic rounded-circle" /><br>
+				<a href="profProfile.html" class="text-white"><h4 class="card-title">John Andrew Santiago</h4></a></a>
+				<p class="card-text">Front-end developer.</p><br>
+				<div style="line-height: 0.1rem;">
+					<p><a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 995 478 2797</a></p>
+					<p><a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>john_andrew_santiago@dlsu.edu.ph</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook"></i>/andrewww.rog</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@santiagoja_rog</a></p>
+					<p><a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@santiagoja_rog</a></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4">
+			<div class="card text-white bg-success">
+			<div class="card-header">Header</div>
+			  <div class="card-body text-center">
+				<img src="eduard.JPG" class="profpic rounded-circle" /><br>
+				<a href="profProfile.html" class="text-white"><h4 class="card-title">Eduard Martin Carlos</h4></a></a>
+				<p class="card-text">Quality Assurance.</p><br>
+				<div style="line-height: 0.1rem;">
+					<p><a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 935 117 8429</a></p>
+					<p><a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>eduard_carlos@dlsu.edu.ph</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook"></i>/Waaaaard</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@emcg_</a></p>
+					<p><a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@emcg_</a></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+	  
+	  </div> <!-- end of row -->
+	  <br>
+	  <div class="row">
+	  <br>
+	  <div class="col-md-4 ml-auto">
+			<div class="card text-white bg-success">
+			<div class="card-header">Header</div>
+			  <div class="card-body text-center">
+				<img src="nigel.JPG" class="profpic rounded-circle" /><br>
+				<a href="profProfile.html" class="text-white"><h4 class="card-title">Nigel Marcus Tan</h4></a></a>
+				<p class="card-text">Front-end developer</p><br>
+				<div style="line-height: 0.1rem;">
+					<p><a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 932 385 1479</a></p>
+					<p><a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>nigel_tan@dlsu.edu.ph</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook"></i>/nigelmarcus.tan</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@nigelmarcus.tan</a></p>
+					<p><a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@nigelmarcus.tan</a></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="col-md-4 mr-auto">
+			<div class="card text-white bg-success">
+			<div class="card-header">Header</div>
+			  <div class="card-body text-center">
+				<img src="xtian.JPG" class="profpic rounded-circle" /><br>
+				<a href="profProfile.html" class="text-white"><h4 class="card-title">Christian Nicole Alderite</h4></a></a>
+				<p class="card-text">Back-end developer.</p><br>
+				<div style="line-height: 0.1rem;">
+					<p><a href="tel:+246 - 542 550 5462" class="text-white"><i class="fa d-inline mr-3 text-white fa-phone"></i>+63 995 756 1818</a></p>
+					<p><a href="mailto:info@pingendo.com" class="text-white"><i class="fa d-inline mr-3 text-white fa-envelope-o"></i>christian_nicole_alderite@dlsu.edu.ph</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-facebook"></i>/nicolealderite</a></p>
+					<p><a href="#" class="text-white"><i class="fa d-inline mr-3 text-white fa-twitter"></i>@alderight</a></p>
+					<p><a href="#" class="text-white" target="blank"><i class="fa d-inline mr-3 fa-instagram text-white"></i>@alderight</a></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+	  
+	  </div> <!-- end of row -->
+
+  </div>
+  <!--container end-->
+  
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+<div class="screen">
+  <paper-fab-speed-dial class="two">
+    <paper-fab class ="blue" icon="more-vert"></paper-fab>
+    <div class="dropdown-content">
+      <a href="aboutus.html"><paper-fab class="info" mini icon="info-outline"></paper-fab></a>
+      <paper-fab class="twitter" mini src="twitter.svg"></paper-fab>
+      <paper-fab class="fblue" mini src="facebook.svg"></paper-fab>
+	  <paper-fab mini src="instagram.svg"></paper-fab>
+    </div>
+  </paper-fab-speed-dial>
+</div>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+</body>
+
+</html>

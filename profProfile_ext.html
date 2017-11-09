@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8"> 
+  
+  <style>
+	.mainContainer {
+	  padding-top: 2rem !important;
+	}
+  
+	.fa-star, .fa-star-half-o, .fa-star-o {
+		color: #f2b01e;
+	}
+	
+	.fa-star-o:hover {
+		color: #f2b01e;
+	}
+	
+	.fa-thumbs-down:hover {
+		color: #EA0034;
+	}
+	
+	.fa-thumbs-up:hover {
+		color: #4286f4;
+		direction: rtl;
+	}
+	
+	.color-like {
+		color: #4286f4;
+	}
+	
+	.color-dislike {
+		color: #EA0034;
+	}
+	
+
+	textarea::-webkit-input-placeholder {
+		color: rgba(0,0,0,0.2) !important;
+	}
+
+	textarea{  
+	  
+	  box-sizing: border-box;
+	  resize: none;
+	}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://fezvrasta.github.io/bootstrap-material-design/dist/css/bootstrap-material-design.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  
+    <!-- bower imports -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="bower_components/paper-fab-speed-dial/paper-fab-speed-dial.html">  
+  <style is="custom-style">
+  paper-fab-speed-dial.two {
+    --paper-fab-speed-dial: {
+      bottom: 2%;
+      right: 1.2%;
+	  position:fixed;
+    };
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+	
+	paper-fab.fblue {
+	  --paper-fab-background: #3B5998;
+	  --paper-fab-keyboard-focus-background: #3B5998;
+	}
+	
+	paper-fab.twitter {
+	  --paper-fab-background: #1DA1F2;
+	  --paper-fab-keyboard-focus-background: #1DA1F2;
+	}
+	
+	paper-fab.info {
+	  --paper-fab-background: #646464;
+	  --paper-fab-keyboard-focus-background: #646464;
+	}
+  
+</style>   
+
+
+</head>
+ 
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="css_collegepage.html">CCS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COL</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">CLA</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">GCOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COB</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">SOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">BAGCED</a>
+          </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  <div class="container mainContainer">
+    <div class="row">
+      <div class="col-md-4"> <!-- left column -->
+	    <div class="row">
+		  <div class="col-md-12"> <!-- Details card -->
+			<div class="card mb-3"> 
+			  <div class="card-header text-center" style="background-image:url(greenwaves.jpg);background-size: 100%;">
+				<img class="rounded-circle" src="rj.jpg" style="width:128px;border: 3px solid white;box-shadow: 2px 2px 15px black;">
+			  </div>
+			  <div class="card-body">
+				<h4 class="card-title">Renato Jose Maria Molano</h4>
+                <p class="card-text"><i class="fa fa-graduation-cap fa-fw"></i> College of Computer Studies</p>
+                <p class="card-text"><i class="fa fa-users fa-fw"></i> Department of Information Technology</p><br>
+				<button type="button" class="btn btn-primary btn-raised" style="width: 100%; height: 100%; font-size: 15px; margin: auto;" data-toggle="modal" data-target="#exampleModal">
+					Add a review
+				</button>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="card-header bg-success text-white">
+					    <div class="row">
+						  <div class="col-md-2" style="max-width: 4rem;">
+						    <i class="fa fa-pencil-square-o fa-3x"></i>
+						  </div>
+						  <div class="col-md-10">
+							<h5><p style="margin: auto;">Rate and review</p></h5>
+							<p style="margin: auto; color: rgba(255,255,255,0.7); white-space:nowrap; overflow: hidden; text-overflow: ellipsis;">Renato Jose Maria Manalo, College of Computer Studies, Department of Information Technology</p>
+						  </div>
+						</div>
+					  </div>
+					  <div class="card-body">
+					  <div class="row">
+						<div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:3rem;"></p>
+						</div>
+						<div class="col-md-10"><text>John Andrew Santiago</text>
+						  <p style="color: rgba(0,0,0,0.5);">Your review will be posted publicly on the web.</p>
+						  <p class="card-text">
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+								<i class="fa fa-star-o fa-2x"></i>
+						 </p>
+						  <div class="form-group">
+							<label for="exampleFormControlTextarea1">Review:</label>
+							<textarea class="form-control pt=3" id="exampleFormControlTextarea1" data-autoresize rows="1" placeholder="Write your review here" style="line-height: 140%;"></textarea>
+						  </div>
+						</div>
+					  </div>
+					  </div>
+					  <div class="card-footer text-right">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Post</button>
+					  </div>
+					  <!--<div class="card">
+					    <div class="card-header bg-success text-white">
+						  Rate
+						</div>
+					  </div>-->
+					</div>
+				  </div>
+				</div>
+				<br>
+			  </div>
+			</div>
+          </div>
+		  <div class="col-md-12"> <!-- Contact card-->
+			<div class="card mb-3">
+			  <div class="card-header bg-success text-white" style="height: 100%;">
+				<h4>Contact</h4>
+			  </div>
+			  <div class="card-body">
+				<p class="card-text"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> rene.molano@delasalle.ph</p>
+				<a href="#" class="text-black"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i> /rj</a>
+				<br>
+			  </div>
+			</div>
+          </div>
+		  <div class="col-md-12"> <!-- Courses card -->
+			<div class="card mb-3">
+			  <div class="card-header bg-success text-white" style="height: 100%;">
+				<h4>Courses</h4>
+			  </div>
+			  <div class="card-body">
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTANA</text>
+				</p>
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTDES</text>
+				</p>
+				<p>
+				<img src="training-blank-128.png" width="24" height="24">
+				<text class="card-text">SYSTIMP</text>
+				</p>
+			  </div>
+			</div>
+          </div>
+		</div>
+      </div>
+      <!-- col -->
+      <div class="col-md-8"> <!-- Information card -->
+        <div class="card text-white mb-3" style="">
+          <div class="card-header bg-success">
+            <h4>Reviews for SYSTANA</h4>
+          </div>
+          <div class="card-body text-black">
+			<div>
+			  <div class="row">
+			    <div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department...<a href="fullReview.html"> Click here for full review </a></p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+			    <div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+				<div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary"> a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+			    <div class="col-md-2" style="max-width: 4rem;"><p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+				</div>
+				<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+				  <p class="card-text">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+				 </p><br>
+					<p style="margin: auto;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!</p>
+					<div style="text-align: right"><text class="text-secondary">Was this helpful? </text><i class="fa fa-thumbs-up fa-2x"></i><text> </text><div class="fa fa-thumbs-down fa-2x"></div></div>
+				</div>
+			  </div>
+			</div>
+          </div>
+        </div>
+      </div>
+      <!-- col -->
+    </div>
+    <!--row -->
+  </div>
+  <!--container end-->
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+<div class="screen">
+  <paper-fab-speed-dial class="two">
+    <paper-fab class ="blue" icon="more-vert"></paper-fab>
+    <div class="dropdown-content">
+      <a href="aboutus.html"><paper-fab class="info" mini icon="info-outline"></paper-fab></a>
+      <paper-fab class="twitter" mini src="twitter.svg"></paper-fab>
+      <paper-fab class="fblue" mini src="facebook.svg"></paper-fab>
+	  <paper-fab mini src="instagram.svg"></paper-fab>
+    </div>
+  </paper-fab-speed-dial>
+</div>
+  
+  
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+  <script>
+	$('.fa-thumbs-up').click(function() {
+		$(this).toggleClass("color-like");
+		$(".fa-thumbs-down").removeClass("color-dislike");
+	});
+	$('.fa-thumbs-down').click(function() {
+		$(this).toggleClass("color-dislike");
+		$(".fa-thumbs-up").removeClass("color-like");
+	});
+	
+	jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+		var offset = this.offsetHeight - this.clientHeight;
+	 
+		var resizeTextarea = function(el) {
+			jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+		};
+		jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+	});
+  </script>
+  
+</body>
+
+</html>

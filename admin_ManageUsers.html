@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- DataTable css styles -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.bootstrap4.min.css">
+	
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+  
+<style is="custom-style">
+  paper-fab {
+    display: inline-block;
+	margin: 8px;
+	
+  }
+
+  paper-fab[mini] {
+    --paper-fab-background: #FF5722;
+  }
+
+  paper-fab[label] {
+    font-size: 20px;
+    --paper-fab-background: #2196F3;
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+    paper-fab.orange {
+      --paper-fab-background: var(--paper-orange-500);
+      --paper-fab-keyboard-focus-background: var(--paper-orange-900);
+    }
+</style>
+  
+  
+  <style>
+  
+	.mainContainer {
+      padding-top: 3rem;
+    }
+  
+  
+    .carousel {
+      background-color: black;
+    }
+
+    .carousel-item {
+      text-align: center;
+    }
+
+    .carousel-item img {
+      height: 400px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      max-width: 100%;
+      left: 0;
+    }
+
+    .carousel-caption h3,
+    p {
+      margin-left: 2rem;
+    }
+
+    .proflabel {
+      display: inline;
+      margin: auto;
+      font-size: 1.1rem;
+      left: 2%;
+      position: relative;
+    }
+
+    .threadlabel {
+      display: inline;
+      margin: auto;
+      font-size: 1.1rem;
+      left: 0.6%;
+      position: relative;
+    }
+
+    @media ( min-width: 768px) {
+      .grid-divider {
+        border-right: 1px solid gray;
+      }
+      .responsive-hr {
+        background-color: gray;
+        opacity: 1;
+      }
+    }
+
+    @media ( max-width: 768px) {
+      .responsive-hr {
+        background-color: gray;
+        opacity: 0;
+      }
+    }
+	
+	.sufab{
+	position:fixed;
+	right:5%;
+	bottom:5%;
+	z-index:18;
+  }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="admin_index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Management
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_manageCarousel.html">Homepage</a>
+			  <a class="dropdown-item" href="admin_ManageUsers.html">Users</a>
+			  <a class="dropdown-item" href="admin_ManageProfs.html">Professors</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Complaints
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_ReportedReviews.html">Reported Reviews</a>
+			  <a class="dropdown-item" href="admin_ReportedUsers.html">Reported Users</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Requests
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_RequestRegistration.html">Registration</a>
+			  <a class="dropdown-item" href="admin_RequestProf.html">Professors</a>
+			</div>
+		  </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Administrator </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <!-- Main elements -->
+	<div class="container mainContainer">
+
+	
+	<h1 class="display-4">
+		Manage Users
+	</h1>
+	<div class="alert alert-info alert-dismissible fade show material-shadow" role="alert">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	  </button>
+	  To edit data, click the desired row first, then click the <paper-fab mini class="blue" icon="create" onclick="logic()"></paper-fab>  button on the bottom-right hand corner of the screen.
+	</div>
+	
+		<div class="row mb-3">
+			<div class="col-md-6">
+		
+
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="Search the table" id="searchpogi">
+				  <span class="input-group-addon"><a href="#" class="text-success"><i class="fa fa-search" aria-hidden="true"></i></a></span>
+				  
+				</div>
+			<br class="d-md-none d-lg-none">
+			</div>
+			
+			<div class="col-md-6">
+				<button type="button" class="btn btn-raised btn-primary" id="butt_filters">ADVANCED FILTERS</button>
+			</div>
+		
+		</div><!--/row-->
+		
+		<div class="row mb-3">
+		<div class="col-md-7">
+			<div id="filters" style="display:none;">
+				<div class="btn-group">
+			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				BY ID NUMBER
+			  </button>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item" href="#"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;115</a>
+				<a class="dropdown-item" href="#">117</a>
+				<a class="dropdown-item" href="#">116</a>
+				<a class="dropdown-item" href="#">114</a>
+				<a class="dropdown-item" href="#">113</a>
+				<a class="dropdown-item" href="#">112</a>
+				<a class="dropdown-item" href="#">111</a>
+			  </div>
+			</div>
+			
+			<div class="btn-group">
+			  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				BY COLLEGE
+			  </button>
+			  <div class="dropdown-menu">
+				<a class="dropdown-item" href="#"><i class="fa fa-check" aria-hidden="true"></i>&nbsp;CCS</a>
+				<a class="dropdown-item" href="#">COS</a>
+				<a class="dropdown-item" href="#">CLA</a>
+				<a class="dropdown-item" href="#">GCOE</a>
+				<a class="dropdown-item" href="#">SOE</a>
+				<a class="dropdown-item" href="#">COB</a>
+				<a class="dropdown-item" href="#">BAGCED</a>
+				<a class="dropdown-item" href="#">COL</a>
+			  </div>
+			</div>
+			</div>
+			
+
+			
+		</div> <!--/col-md-10-->	
+		
+		</div> <!--/row-->
+		
+		
+		<div class="row mb-3">
+			<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table table-hover table-bordered nowrap material-shadow" cellspacing="0" width="100%" id="yutangina">
+						<thead class="thead-inverse">
+							<tr>
+								<th>ID</th>
+								<th>Username</th>
+								<th>Last Name</th>
+								<th>First Name</th>
+								<th>Email</th>
+								<th>College</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id= "objID">11426963</td>
+								<td id="username">earlCALANTUAN_</td>
+								<td id="lName">Calantuan</td>
+								<td id="fName">Earl</td>
+								<td id="eMail">earl_calantuan@dlsu.edu.ph</td>
+								<td id="college">CCS</td>
+								<td id="status">Active</td>
+							</tr>
+							<tr>
+								<td id= "objID">11526963</td>
+								<td id="username">santiago_ja</td>
+								<td id="lName">Santiago</td>
+								<td id="fName">John Andrew</td>
+								<td id="eMail">john_andrew_santiago@dlsu.edu.ph</td>
+								<td id="college">CCS</td>
+								<td id="status">Active</td>
+							</tr>
+							<tr>
+								<td id= "objID">11518414</td>
+								<td id="username">ochinchinMaster_</td>
+								<td id="lName">Inoue</td>
+								<td id="fName">Yuta-Kun</td>
+								<td id="eMail">yuta_inoue@dlsu.edu.ph</td>
+								<td id="college">CCS</td>
+								<td id="status">Active</td>
+							</tr>
+							<tr>
+								<td id= "objID">11571242</td>
+								<td id="username">xtian_alderite</td>
+								<td id="lName">Alderite</td>
+								<td id="fName">Christian Nicole</td>
+								<td id="eMail">christian_alderite@dlsu.edu.ph</td>
+								<td id="college">CCS</td>
+								<td id="status">Active</td>
+							</tr>
+							<tr>
+								<td id= "objID">11557212</td>
+								<td id="username">EMCG_</td>
+								<td id="lName">General</td>
+								<td id="fName">Eduard Bading</td>
+								<td id="eMail">eduard_martin_carlos@dlsu.edu.ph</td>
+								<td id="college">CCS</td>
+								<td id="status">Active</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+		
+			
+	<!-- floating edit button-->
+	<div class="sufab" id="fab">
+		<i class="fa fa-arrow-down" aria-hidden="true" id="assist" style="display:block;text-align:center;font-size:5rem;opacity:0;"></i>
+		<paper-fab class="blue" icon="create" data-toggle="modal" data-target="#exampleModal" id="editThis"></paper-fab>
+	</div>
+		
+		
+	</div><!--div class container -->
+	
+	
+		<!-- MODAL HERE-->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Edit professor #</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<form>
+					<div class="form-group">
+						<img src="placeholder_user.png" style="width:20%;float:left;" class="mr-3" />
+						<label for="exampleInputFile">Profile Picture</label>
+						<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+						<small id="fileHelp" class="form-text text-muted">Update the profile picture of the professor.</small>
+					</div>
+
+							
+					<div class="form-group">
+						<label for="edituName" class="form-control-label">Username:</label>
+						<input type="text" class="form-control" id="edituName" name="edituName">
+					</div>
+					<div class="form-group">
+						<label for="editEmail" class="form-control-label">E-mail:</label>
+						<input type="email" class="form-control" id="editEmail" name="editEmail">
+					</div>
+					<div class="form-group">
+						<label for="editlName" class="form-control-label">Last name:</label>
+						<input type="text" class="form-control" id="editlName" name="editlName">
+					</div>
+					<div class="form-group">
+						<label for="editfName" class="form-control-label">First name:</label>
+						<input type="text" class="form-control" id="editfName" name="editfName">
+					</div>
+					<div class="form-group">
+					<label for="editCollege" class="form-control-label">College:</label>
+					<select class="custom-select form-control" id="editCollege" name="editCollege">
+						<option selected disabled>Choose...</option>
+						<option value="CCS">CCS</option>
+						<option value="COL">COL</option>
+						<option value="CLA">CLA</option>
+						<option value="COS">COS</option>
+						<option value="GCOE">GCOE</option>
+						<option value="COB">COB</option>
+						<option value="SOE">SOE</option>
+						<option value="BAGCED">BAGCED</option>
+					  </select>
+					</div>
+
+					<div class="form-group">
+					<label for="editStatus" class="form-control-label">Status:</label>
+					<select class="custom-select form-control" id="editStatus" name="editStatus">
+						<option selected disabled>Choose...</option>
+						<option value="Active">Active</option>
+						<option value="Inactive">Inactive</option>
+						<option value="Retired">Graduated</option>
+					  </select>
+					</div>
+				  
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save Changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div> <!-- END OF MODAL -->	
+	
+	
+  <!--FOOTER-->
+  <br>
+  <div class="bg-success text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white" style="font-size:0.7rem;">© Copyright 2017 Phantom Five Dev Team - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+<!-- Data Table Libs  -->
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.0/js/responsive.bootstrap4.min.js"></script>
+  
+<script type="text/javascript" class="init">
+var prevObject;
+var objID;
+var email;
+var username
+var lName;
+var fName;
+var college;
+var status;
+
+$(document).ready(function() {
+	$('body').bootstrapMaterialDesign();
+	
+	$('#yutangina').DataTable( {
+		responsive: {
+			details: {
+				display: $.fn.dataTable.Responsive.display.modal( {
+					header: function ( row ) {
+						var data = row.data();
+						return 'Details for '+data[0]+' '+data[1];
+					}
+				} ),
+				renderer: $.fn.dataTable.Responsive.renderer.tableAll( {
+					tableClass: 'table'
+				} )
+			}
+		}
+	} );
+	
+	$("#yutangina_filter").hide();
+	
+	//EDITS THE HIGHLIGHTED ROW
+	$("#editThis").click(function(){
+		var test = $('.tr-highlighted');
+		test.each(function()
+		{
+			objID = $(this).find('#objID').html();
+			username = $(this).find('#username').html();
+			email = $(this).find('#eMail').html();
+			lName = $(this).find('#lName').html();
+			fName = $(this).find('#fName').html();
+			college = $(this).find('#college').html();
+			status = $(this).find('#status').html();
+		});
+	});
+	
+	//REPLICATE THE SEARCH BAR INPUT TO THE RESPONSIVE DATA TABLE SEARCH INPUT
+	//HIDES THE RESPONSIVE SEARCH BOX
+	$('#searchpogi').on('keypress keyup keydown',function(event) { 
+	  // create the event
+	   var press = jQuery.Event(event.type);
+	   var code = event.keyCode || event.which;
+	   press.which = code;
+	  // trigger 
+	  $("input[type=search]").val(this.value);
+	  $("input[type=search]").trigger(event.type, {'event': press});
+	});
+	
+	
+	$("#butt_filters").click(function(){
+		$("#filters").toggle(300);
+	});
+	
+	$('#exampleModal').on('show.bs.modal', function (event) {
+		var modal = $(this);
+		
+		modal.find('#exampleModalLabel').text('Edit student #' + objID);
+		modal.find('#editfName').val(fName);
+		modal.find('#editlName').val(lName);
+		modal.find('#editCollege').val(college);
+		modal.find('#editStatus').val(status);
+		modal.find('#editEmail').val(email);
+		modal.find('#edituName').val(username);
+	})
+	
+});
+
+//ADDS A HIGHLIGHT TO THE CLICKED ROW ON TABLE, FOR EDITING PURPOSES
+		$("table tr").on('click', function () {
+		if(prevObject == null){
+			prevObject = $(this);
+			$(this).addClass("tr-highlighted");
+		}
+		else{
+			prevObject.removeClass("tr-highlighted");
+			prevObject = $(this);
+			$(this).addClass("tr-highlighted");
+		}
+		
+	});
+	
+function logic(){
+    $("#assist").css({"margin-bottom": "300px", "opacity": "0"});
+	var div = $("#assist");
+    div.animate({
+            opacity: '1.0',
+			marginBottom: '0px'
+        });
+	div.animate({
+            opacity: '0.0',
+        });
+} 
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <!-- bower imports -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="bower_components/paper-fab-speed-dial/paper-fab-speed-dial.html">
+
+<style is="custom-style">
+  paper-fab-speed-dial.two {
+    --paper-fab-speed-dial: {
+      bottom: 2%;
+      right: 1.2%;
+	  position:fixed;
+    };
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+	
+	paper-fab.fblue {
+	  --paper-fab-background: #3B5998;
+	  --paper-fab-keyboard-focus-background: #3B5998;
+	}
+	
+	paper-fab.twitter {
+	  --paper-fab-background: #1DA1F2;
+	  --paper-fab-keyboard-focus-background: #1DA1F2;
+	}
+	
+	paper-fab.info {
+	  --paper-fab-background: #646464;
+	  --paper-fab-keyboard-focus-background: #646464;
+	}
+  
+</style>    
+  
+  <style>
+    .mainContainer {
+      padding-top: 2rem;
+    }
+	.proflabel{
+	font-size:1rem;
+	}
+	.profpic{
+	width:5rem;
+	box-shadow: 0px 3px 5px grey;
+	position:absolute;
+	transform: translate(-2.4rem,-4rem); /* Standard syntax */
+	}
+	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px)
+	{
+		.card h1.card-title,
+		.card h2.card-title,
+		.card h3.card-title,
+		.card h4.card-title,
+		.card h5.card-title,
+		.card h6.card-title {
+		font-size: 1.0rem !important;
+		font-weight: 300 !important; }
+	
+	}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
+
+<body>
+	  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+		<div class="container">
+		  <a class="navbar-brand" href="index.html">Profsmato</a>
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="css_collegepage.html">CCS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COL</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">CLA</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">GCOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COB</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">SOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">BAGCED</a>
+          </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  
+  
+	<div class="container mainContainer">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>CCS: Information Technology Department</h2>
+			</div>
+		</div>
+		<hr>
+
+		<div class="row">
+			<div class="col-md-5">
+				<form>
+				<div class="input-group">
+				  <input type="text" class="form-control" placeholder="Search an IT prof...">
+				  <span class="input-group-btn">
+					<button class="btn btn-secondary" type="button">Go!</button>
+				  </span>
+				</div>
+				</form>
+			</div>
+		
+		</div>
+		
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/rjmolano.JPG" class="profpic rounded-circle" /><br>
+					<a href="profProfile.html" class="text-white"><h4 class="card-title">Renato Jose Maria Molano</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/siroli.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">SirOli Malabanan</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/alain.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Alain Encarnacion</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/diane.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Diane Lim</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+
+			</div>
+			
+		</div> <!-- div class row -->
+		<br>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/arcilla.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Mary Jane Arcilla</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/bertumen.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Estefanie Bertumen</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/cheng_danny.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Danny Cheng</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/ching_michelle.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Michelle Ching</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+
+			</div>
+			
+		</div> <!-- div class row -->
+		<br>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/sipin.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Glenn Sipin</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR LECTURER</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/valencia.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Peter Laurence Valencia</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/tabora.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Liandro Antonio Tabora</h4></a>
+					<p class="card-text">ASSISTANT PROFESSOR</p>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="card text-white bg-success" style="height:12rem;">
+				<div class="card-header">&nbsp;</div>
+				  <div class="card-body text-center">
+					<img src="profpics/acuna.JPG" class="profpic rounded-circle" /><br>
+					<a href="#" class="text-white"><h4 class="card-title">Johannes Paulus Acuña</h4></a>
+					<p class="card-text">FOR HIRING</p>
+				  </div>
+				</div>
+				
+			</div>
+			
+		</div> <!-- div class row -->
+		<br>
+		
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<h3 class="display-3">Can't find your prof?</h3>
+				<p class="lead">Hit the admins up by filling up the form below. The prof will have to be verified first before he/she will be added to our database.</p>
+				<hr class="my-4">
+				<form id="subcomReply">
+					<div class="form-group">
+					  <label class="mr-sm-2" for="profcollege" style="color:grey;">Professor College</label>
+						<select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="profcollege" name="idnum">
+						<option selected disabled>College</option>
+						<option>CCS</option>
+						<option>COL</option>
+						<option>CLA</option>
+						<option>COS</option>
+						<option>GCOE</option>
+						<option>COB</option>
+						<option>SOE</option>
+						<option>BAGCED</option>
+					  </select>
+					</div>
+					<input class="form-control" type="text" placeholder="Type the professor's name here...">
+					<br>
+					<button type="submitLOL" class="btn btn-primary btn-md btn-raised">SUBMIT</button>
+				</form>
+			</div>
+		</div>
+					
+		</div> <!-- div class main container -->
+		
+	</div><!--container end-->
+  
+  
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+<div class="screen">
+  <paper-fab-speed-dial class="two">
+    <paper-fab class ="blue" icon="more-vert"></paper-fab>
+    <div class="dropdown-content">
+      <a href="aboutus.html"><paper-fab class="info" mini icon="info-outline"></paper-fab></a>
+      <paper-fab class="twitter" mini src="twitter.svg"></paper-fab>
+      <paper-fab class="fblue" mini src="facebook.svg"></paper-fab>
+	  <paper-fab mini src="instagram.svg"></paper-fab>
+    </div>
+  </paper-fab-speed-dial>
+</div>
+  
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+</body>
+
+</html>

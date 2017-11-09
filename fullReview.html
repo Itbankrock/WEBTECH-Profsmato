@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <!-- bower imports -->
+	<script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+	<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="bower_components/paper-fab-speed-dial/paper-fab-speed-dial.html">
+
+<style is="custom-style">
+  paper-fab-speed-dial.two {
+    --paper-fab-speed-dial: {
+      bottom: 2%;
+      right: 1.2%;
+	  position:fixed;
+    };
+  }
+  
+  paper-fab.blue {
+      --paper-fab-background: var(--paper-light-blue-500);
+      --paper-fab-keyboard-focus-background: var(--paper-light-blue-900);
+    }
+	
+	paper-fab.fblue {
+	  --paper-fab-background: #3B5998;
+	  --paper-fab-keyboard-focus-background: #3B5998;
+	}
+	
+	paper-fab.twitter {
+	  --paper-fab-background: #1DA1F2;
+	  --paper-fab-keyboard-focus-background: #1DA1F2;
+	}
+	
+	paper-fab.info {
+	  --paper-fab-background: #646464;
+	  --paper-fab-keyboard-focus-background: #646464;
+	}
+  
+</style>
+  
+  <style>
+    .mainContainer {
+      padding-top: 1rem;
+    }
+	
+	.fa-star, .fa-star-half-o, .fa-star-o {
+		color: #f2b01e;
+	}
+	
+	.fa-star-o:hover {
+		color: #f2b01e;
+	}
+	
+	.fa-thumbs-down:hover {
+		color: #EA0034;
+	}
+	
+	.fa-thumbs-up:hover {
+		color: #4286f4;
+		direction: rtl;
+	}
+	
+	.color-like {
+		color: #4286f4;
+	}
+	
+	.color-dislike {
+		color: #EA0034;
+	}
+	
+	textarea::-webkit-input-placeholder {
+		color: rgba(0,0,0,0.2) !important;
+	}
+
+	textarea{  
+	  
+	  box-sizing: border-box;
+	  resize: none;
+	}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Profsmato</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="css_collegepage.html">CCS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COL</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">CLA</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COS</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">GCOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">COB</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">SOE</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="#">BAGCED</a>
+          </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  <div class="container mainContainer">
+	<ol class="breadcrumb">
+	  <li class="breadcrumb-item"><a href="profProfile.html">Renato Molano</a></li>
+	  <li class="breadcrumb-item"><a href="profProfile.html">SYSTIMP</a></li>
+	  <li class="breadcrumb-item active">John Andrew's Review</li>
+	</ol>
+  <div class="row">
+	<div class="col-md-12">
+	<div class="card">
+	  <div class="card-header bg-success text-white">
+		Best IT Prof!
+	  </div>
+	  <div class="card-body">
+		<div class="row">
+			<div class="col-md-2" style="max-width: 4rem;">
+				<p class="card-text"><img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:55px;"></p>
+			</div>
+		<div class="col-md-10"><text>John Andrew Santiago</text><text class="text-secondary">  a month ago</text>
+			<p class="card-text">
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+			</p><br>
+			<p style="margin: auto; text-align:justify;">The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department! The best prof in the CCS department!
+			</p>
+			<div>
+				<br>
+				<div class="row">
+
+					<div class="col-md-6">
+						<text class="text-secondary">Was this review helpful? &nbsp;</text>
+						<i class="fa fa-thumbs-up fa-2x"></i><text>1,337 </text>
+						<i class="fa fa-thumbs-down fa-2x"></i><text>1 </text>
+					</div>
+				</div> <!-- div class row end -->
+
+			</div>
+		</div>
+		</div> <!-- div class row end -->
+	  </div>
+	</div> <!-- div class card end -->
+	</div>
+   </div>
+	
+	<br>
+	<div class ="row">
+				
+		<div class="col-md-12">
+
+			<div class="card mb-3">
+				<div class="card-header text-white bg-success">Comments</div>
+				<div class="card-body">
+					
+					<div class="row">
+						<div class="col-md-12">
+						
+						<text>Yuta Inoue </text> <text class="text-secondary"> 52 mins. ago</text>
+						
+						<div class="review-comment">
+							<p>
+								6 Most Outstanding Professor Award, what more to say?
+							</p>
+							
+							<div class="review-subcomment" id="subcomments" style="display:none;">
+								<p>
+									<text>&nbsp;John Andrew Santiago </text> <text class="text-secondary"> 45 mins. ago</text>
+									
+									<div class="review-subsubcomment">
+										<p style="line-height: 0%;">Thanks Sherv.</p>
+									</div>
+									
+								</p>
+								
+								<p>
+									<text>&nbsp;Eduard Carlos </text> <text class="text-secondary"> 21 mins. ago</text>
+									
+									<div class="review-subsubcomment">
+										<p style="line-height: 0%;">Hey orb, werpa lang lodi.</p>
+									</div>
+									
+								</p>
+							</div>
+							
+							<a href="#!" id="viewreply"><p style="line-height: 20%;">Reply </p></a>
+							<form id="subcomReply" style="display:none;">
+								<input class="form-control form-control-sm" type="text" placeholder="Type your message here...">
+								<br>
+								<button type="submitLOL" class="btn btn-primary btn-raised" style="float:right;">SUBMIT REPLY</button>
+							</form>
+							<p><a href="#!" id="viewsubsub"><i class="fa fa-reply-all" aria-hidden="true" style="transform: scale(-1, -1);"></i> View 2 replies</a></p>
+							<hr>
+						</div>
+						
+							
+						</div>
+					
+					</div>
+					
+					
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	
+  </div>
+  <!--container end-->
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+<div class="screen">
+  <paper-fab-speed-dial class="two">
+    <paper-fab class ="blue" icon="more-vert"></paper-fab>
+    <div class="dropdown-content">
+      <a href="aboutus.html"><paper-fab class="info" mini icon="info-outline"></paper-fab></a>
+      <paper-fab class="twitter" mini src="twitter.svg"></paper-fab>
+      <paper-fab class="fblue" mini src="facebook.svg"></paper-fab>
+	  <paper-fab mini src="instagram.svg"></paper-fab>
+    </div>
+  </paper-fab-speed-dial>
+</div>
+
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+    
+  <script>
+  
+	$('.fa-thumbs-up').click(function() {
+		$(this).toggleClass("color-like");
+		$(".fa-thumbs-down").removeClass("color-dislike");
+	});
+	$('.fa-thumbs-down').click(function() {
+		$(this).toggleClass("color-dislike");
+		$(".fa-thumbs-up").removeClass("color-like");
+	});
+	
+	$('#viewreply').click(function() {
+		$('#subcomReply').toggle();
+	});
+	
+	$('#viewsubsub').click(function() {
+		$('#subcomments').toggle();
+		var x = $('#viewsubsub').html();
+		
+		
+		if ($('#subcomments').is(':visible')) {
+             x = x.replace("View", "Hide");
+			 
+        } else {
+             x = x.replace("Hide", "View");
+        }  
+		
+		$('#viewsubsub').html(x);
+		
+	});
+	
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <style>
+	.carousel{
+	background-color: rgba(0,0,0,0.6); 
+	margin-left: -10%; 
+	margin-right: -10%; 
+	margin-top: 7rem;
+	overflow: hidden;
+	}
+	
+	.proflabel{
+	font-size:1rem;
+	}
+	
+	.profpic{
+	width:5rem;
+	box-shadow: 0px 3px 5px grey;
+	position:absolute;
+	transform: translate(-2.4rem,-4rem); /* Standard syntax */
+	}
+	
+	@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px)
+	{
+		.card h1.card-title,
+		.card h2.card-title,
+		.card h3.card-title,
+		.card h4.card-title,
+		.card h5.card-title,
+		.card h6.card-title {
+		font-size: 1.0rem !important;
+		font-weight: 300 !important; }
+	
+	}
+	
+	.card-body {
+		overflow: hidden;
+		background-size: 100% 100%;
+	}
+	
+	div.scrollmenu {
+		background-color: #fff;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	
+	div.scrollmenu img:hover {
+	    border: 2px solid green;
+	}
+
+	textarea{  
+	  box-sizing: border-box;
+	  resize: none;
+	}
+  </style>  
+</head>
+
+<body>
+	  <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+		<div class="container">
+		  <a class="navbar-brand" href="index.html">Profsmato</a>
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Management
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_manageCarousel.html">Homepage</a>
+			  <a class="dropdown-item" href="admin_ManageUsers.html">Users</a>
+			  <a class="dropdown-item" href="admin_ManageProfs.html">Professors</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Complaints
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_ReportedReviews.html">Reported Reviews</a>
+			  <a class="dropdown-item" href="admin_ReportedUsers.html">Reported Users</a>
+			</div>
+		  </li>
+		  
+		  <li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  Requests
+			</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			  <a class="dropdown-item" href="admin_RequestRegistration.html">Registration</a>
+			  <a class="dropdown-item" href="admin_RequestProf.html">Professors</a>
+			</div>
+		  </li>
+		  
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="Preview" role="button"> Andrew Santiago </a>
+            <div class="dropdown-menu" aria-labelledby="Preview">
+              <div style="text-align:center;">
+                <img class="rounded-circle" src="andrew.jpg" alt="Generic placeholder image" style="width:64px;">
+                <br> <text>Andrew</text>
+                <hr> </div>
+              <a class="dropdown-item" href="studentProfile.html">Profile</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAVBAR-->
+  
+  
+	<div class="container mainContainer">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Manage Carousel</h2>
+			</div>
+		</div>
+		<hr>
+		
+		<div class="row">
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
+				<div class="card" style="width: 20rem; height: 14rem;">
+				  <div class="card-body" style="background-image:url(prof1.jpg);">
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+					<div class="card-header text-white carousel">
+					  <a href="profProfile.html" class="text-white">Most Outstanding Teacher</a>
+					  <p class="card-text">Sir RJ Molano, the CCS favorite stays on top.</p>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
+				<div class="card" style="width: 20rem; height: 14rem;">
+				  <div class="card-body" style="background-image:url(prof2.jpg);">
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+				    <div class="card-header text-white carousel">
+					<a href="#" class="text-white">Unmatched</a>
+					<p class="card-text">Ms. Diane Lim, the true definition of beauty and brains.</p>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
+				<div class="card" style="width: 20rem; height: 14rem;">
+				  <div class="card-body" style="background-image:url(prof3.jpg);">
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="float:right;" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </button>
+					<div class="card-header text-white carousel">
+					  <a href="#" class="text-white">L O D I</a>
+					  <p class="card-text">Sir Jordan Deja, Leader of Design and Innovation.</p>
+					</div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-6" style="margin-top: 2rem;">
+				<div class="card text-white" style="width: 20rem; height: 14rem;">
+				  <div class="card-body text-center">
+				    <button type="button" class="btn btn-success bmd-btn-fab" style="width: 4rem; height: 4rem; margin-top: 3rem" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-plus fa-1x" aria-hidden="true"></i> </button>
+					<p class="text-secondary" style="font-size: 1rem;">Add slide</p>
+				  </div>
+				</div>
+			</div>
+			
+		</div> <!-- div class row -->
+		<br>
+		</div> <!-- div class main container -->
+		
+		
+		
+		
+		
+		
+	</div><!--container end-->
+  
+    <!--Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-lg" style="overflow-y: auto;">
+		<div class="modal-content">
+		  <div class="card-header bg-success text-white">
+			<h5 class="card-title" id="exampleModalLabel" style="margin: auto;">Edit Slide</h5>
+		  </div>
+		  <div class="card-body">
+			<button class="btn btn-primary" onclick="filedialog()" style="width:100%; height: 100px;">
+			<i class="fa fa-plus" aria-hidden="true"></i> Upload Photo
+			<input type="file" id="upload" hidden>
+			</button>
+			<hr>
+			<form>
+			<div class="form-group">
+			  <label for="exampleFormControlInput1">Title</label>
+			  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter title">
+		    </div>
+			<div class="form-group">
+			  <label for="exampleFormControlTextarea1">Caption</label>
+			  <textarea class="form-control pt=3" id="exampleFormControlTextarea1" data-autoresize rows="1" placeholder="Write the caption here" style="line-height: 140%;"></textarea>
+		    </div>
+			</form>
+		  </div>
+		  <div class="card-footer text-right">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary">Post</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+		
+  
+  
+  <!--FOOTER-->
+  <br>
+  <div>
+    <div class="container">
+          <p class="text-center text-black" style="margin-left:0px;!important">© Copyright 2017 Phantom Five Dev Team, all rights reserved. </p>
+    </div>
+  </div>
+  <!--END FOOTER-->
+  
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/split.min.js">
+  </script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/popper.min.js"></script>
+  <script src="bootstrap-material-design.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/anchor.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/clipboard.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/vendor/holder.min.js"></script>
+  <script src="https://fezvrasta.github.io/bootstrap-material-design/assets/js/src/application.js"></script>
+  
+  <script>
+    jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+		var offset = this.offsetHeight - this.clientHeight;
+	 
+		var resizeTextarea = function(el) {
+			jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+		};
+		jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+	});
+	
+	function filedialog() {
+		document.getElementById("upload").click();
+	}
+  </script>
+</body>
+
+</html>

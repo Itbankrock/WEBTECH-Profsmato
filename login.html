@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap-material-design.css" rel="stylesheet">
+  <!-- Phantom Five Custom CSS. PUT THIS AFTER THE LINK HREF TO bootstrap-material-design.css -->
+  <link href="Fixes_and_Additional_Classes.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("loginwallpaper.jpg");
+    }
+
+    #logincard {
+      background: rgba(76, 175, 80, 0.95)!important;
+      margin: auto;
+      margin-top: 0%;
+    }
+
+    #logincardfooter {
+      background: rgba(0, 130, 0, 0.0);
+      margin: auto;
+    }
+	
+	/*! Fixes the dark grey color of placeholder text in input boxes  */
+	.form-control::placeholder {
+		color: white;
+		opacity: 1
+	}
+
+	input::-webkit-input-placeholder {
+		color: white;
+	}
+
+	::-webkit-input-placeholder {
+		color: white;
+	}
+
+	::-moz-placeholder {
+		color: white;
+	}
+
+	::-ms-placeholder {
+		color: white;
+	}
+
+	::placeholder {
+		color: white;
+	}
+	
+  </style>
+</head>
+
+<body>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"> </div>
+        <div class="col-md-6">
+          <div class="card text-white p-5 bg-success" id="logincard">
+            <img src="logobanner.png" style="width:100%;">
+            <div class="card-body">
+              <!--<h1 class="mb-4">Login</h1>-->
+              <form action="" post="">
+                <div class="form-group"> <label class="text-white">Email address</label>
+                  <input type="email" class="form-control text-white" name="email" id="emailadd"> </div>
+                <div class="form-group"> <label class="text-white">Password</label>
+                  <input type="password" class="form-control text-white" name="pw" id="passw"> </div>
+                <a href="!#" id="loginhref"><button type="button" class="btn btn-md btn-secondary btn-raised" id="btnlogin">Login</button></a>
+              </form>
+			  <a href="signup.html"><button class="btn btn-md btn-secondary btn-raised">SIGN UP</button></a>
+            </div>
+            <!--card-body-->
+            <div class="card-footer" id="logincardfooter" style="text-align:center;">Profsmato is brought to you by Phantom Five Dev Team, ©2017.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://unpkg.com/popper.js@1.12.5/dist/umd/popper.js" integrity="sha384-KlVcf2tswD0JOTQnzU4uwqXcbAy57PvV48YUiLjqpk/MJ2wExQhg9tuozn5A1iVw" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/js/bootstrap-material-design.js" integrity="sha384-hC7RwS0Uz+TOt6rNG8GX0xYCJ2EydZt1HeElNwQqW+3udRol4XwyBfISrNDgQcGA" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() { $('body').bootstrapMaterialDesign(); });
+	
+	$("#btnlogin").click(function() {
+		var text_value = $("#emailadd").val();
+		var text_pass = $("#passw").val();
+		if(text_value=="admin@profsmato.com" && text_pass=="1234") {
+			$("#loginhref").attr("href", "admin_index.html");
+			}
+		else if(text_value=="user@dlsu.edu.ph" && text_pass=="1234") {
+			$("#loginhref").attr("href", "index.html");
+			}
+		else{
+			alert("Invalid password");
+			}
+		});
+	
+  </script>
+</body>
+
+</html>

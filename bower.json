@@ -1,0 +1,21 @@
+{
+  "name": "WEBTECH-Prototype-Not-Master-Branch",
+  "description": "WEBTECH Prototype",
+  "main": "index.html",
+  "authors": [
+    "Santiago_Tan"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "paper-fab-speed-dial": "paper-speed-dial#^0.6.0"
+  }
+}
